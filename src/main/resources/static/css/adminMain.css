@@ -1,0 +1,65 @@
+#top {
+    background-color: #333333;
+    color: white;
+    size: 121px;
+    padding: 0.8%;
+}
+
+#nav {
+    padding: 0;
+}
+
+#nav1 {
+    padding-right: 70%;
+    padding-left: 10%;
+    margin-top: 10%;
+    margin-left: 0;
+}
+
+#nav2 {
+    padding-right: 70%;
+    padding-left: 10%;
+}
+
+#panel {
+    margin-top: 0;
+    padding-top: 2%;
+    padding-bottom: 100%;
+    padding-left: 5%;
+    background-color: #f8f9fa;
+}
+
+#newUser {
+    margin-top: 50px;
+    padding: auto;
+}
+
+#allUsers {
+    background-color: #f7f7f7;
+}
+
+
+h5 {
+    padding-left: 40%;
+}
+
+#formAdd {
+    padding-right: 25%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+#btnAddSubmit {
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+#modalEdit {
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+#modalDelete {
+    margin-left: 18%;
+    margin-right: 18%;
+}
