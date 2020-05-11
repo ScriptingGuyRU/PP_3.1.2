@@ -10,6 +10,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 @Entity(name = "users")
 public class User implements UserDetails {
@@ -45,7 +47,7 @@ public class User implements UserDetails {
     @Email(message = "Поле должно быть по стандартам email")
     private String email;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "id"),
                 inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
@@ -167,5 +169,14 @@ public class User implements UserDetails {
         return Objects.hash(id, userName, password, lastName, age, email, roles);
     }
 
+    @Override
+    public String toString() {
+        return "userName :" + userName +
+                "\nlastName " + lastName +
+                "\npassword " + password +
+                "\nemail " + email +
+                "\nage " + age +
+                "\nroles " + roles.stream().map(Objects::toString).collect(Collectors.joining(" "));
+    }
 }
 

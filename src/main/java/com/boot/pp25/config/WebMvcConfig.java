@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.*;
 public class WebMvcConfig implements WebMvcConfigurer {
 
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login").setViewName("BootStrapTest");
+        registry.addViewController("/login").setViewName("login");
     }
 
     @Override

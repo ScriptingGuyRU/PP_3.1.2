@@ -52,7 +52,7 @@ public class adminController {
         }
 
 
-
+        mv.addObject("userWithRoleUser",userService.findUserByUserName(auth.getName()));
         mv.addObject("users",userService.findAll());
         mv.addObject("userNameAuth",auth.getName());
         mv.addObject("rolesAuth",roles.stream().map(Objects::toString).collect(Collectors.joining(" ")));
@@ -95,8 +95,11 @@ public class adminController {
                                                @RequestParam(value = "rolesFromHtml") String[] rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
 
+        logger.warn(user.toString());
+        System.out.println(user.toString());
+
         if(result.hasErrors()){
-            mv.setViewName("adminPages/editUserPage");
+            mv.setViewName("adminPages/adminMainPageBootStrap");
             return mv;
         }
 
@@ -115,7 +118,7 @@ public class adminController {
         return mv;
     }
 
-    @GetMapping("/delete/{id}")
+    @PostMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") Long id){
         userService.deleteById(id);
         return "redirect:/admin";
