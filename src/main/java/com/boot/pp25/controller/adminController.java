@@ -46,7 +46,7 @@ public class adminController {
             roles.add(a.getAuthority());
         }
 
-        //Временный секьюрити
+
         if (roles.contains("ADMIN")){
             mv.addObject("userIsAdmin",true);
         }
@@ -63,14 +63,8 @@ public class adminController {
 
     @PostMapping("/add")
     public ModelAndView addUserControllerPost(@ModelAttribute("user") @Valid User user,
-                                              BindingResult result,
                                               @RequestParam(value = "rolesFromHtml") String[] rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
-        if (result.hasErrors()){
-            logger.error(String.valueOf(result.getAllErrors()));
-            mv.setViewName("adminPages/adminMainPageBootStrap");
-            return mv;
-        }
 
         Set<Role> userRoles = new HashSet<>();
         for (String role: rolesFromHtml ) {
@@ -91,17 +85,9 @@ public class adminController {
 
     @PostMapping("/edit")
     public ModelAndView editUserControllerPost(@ModelAttribute @Valid User user,
-                                               BindingResult result,
                                                @RequestParam(value = "rolesFromHtml") String[] rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
 
-        logger.warn(user.toString());
-        System.out.println(user.toString());
-
-        if(result.hasErrors()){
-            mv.setViewName("adminPages/adminMainPageBootStrap");
-            return mv;
-        }
 
         Set<Role> userRoles = new HashSet<>();
         for (String role: rolesFromHtml ) {
