@@ -35,48 +35,22 @@ public class AdminController {
 
     @GetMapping
     public ModelAndView mainAdminControllerGet(Authentication auth){
-        ModelAndView mv = new ModelAndView();
-//        получение списка ролей для помещения в navbar
-        Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
-        List<String> roles = new ArrayList<String>();
-        for (GrantedAuthority a : authorities) {
-            roles.add(a.getAuthority());
-        }
-
-
-        if (roles.contains("ADMIN")){
-            mv.addObject("userIsAdmin",true);
-        }
-
-
-        mv.addObject("userWithRoleUser",userService.findUserByUserName(auth.getName()));
-        mv.addObject("users",userService.findAll());
-        mv.addObject("userNameAuth",auth.getName());
-        mv.addObject("rolesAuth",roles.stream().map(Objects::toString).collect(Collectors.joining(" ")));
-        mv.addObject("user", new User()); //для Thymeleaf нужно передать объект
-        mv.setViewName("adminsPages/admin");
-        return mv;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("authUser",auth.getPrincipal());
+        modelAndView.addObject("users",userService.findAll());
+        modelAndView.addObject("userEmail",((User) auth.getPrincipal()).getEmail());
+        modelAndView.addObject("user", new User()); //для Thymeleaf нужно передать объект
+        modelAndView.addObject("rolesAuth",((User) auth.getPrincipal()).getRoles()
+                .stream().map(Objects::toString).collect(Collectors.joining(" ")));
+        modelAndView.setViewName("adminsPages/admin");
+        return modelAndView;
     }
 
     @PostMapping("/add")
     public ModelAndView addUserControllerPost(@ModelAttribute("user") @Valid User user,
                                               @RequestParam(value = "rolesFromHtml") String rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
-
-        Set<Role> userRoles = new HashSet<>();
-            if (rolesFromHtml.equals("user")) {
-                userRoles.add(roleServices.getRoleByName("USER"));
-            }
-            if (rolesFromHtml.equals("admin")) {
-                userRoles.add(roleServices.getRoleByName("ADMIN"));
-            }
-        if (rolesFromHtml.equals("adminAndUser")) {
-            userRoles.add(roleServices.getRoleByName("ADMIN"));
-            userRoles.add(roleServices.getRoleByName("USER"));
-        }
-
-
-        user.setRoles(userRoles);
+        user.setRoles(getSetRoles(rolesFromHtml));
         userService.saveUser(user);
         logger.info("Add User: " + user.toString());
         mv.setViewName("redirect:/admin");
@@ -87,20 +61,7 @@ public class AdminController {
     public ModelAndView editUserControllerPost(@ModelAttribute @Valid User user,
                                                @RequestParam(value = "rolesFromHtml") String rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
-
-
-        Set<Role> userRoles = new HashSet<>();
-        if (rolesFromHtml.equals("user")) {
-            userRoles.add(roleServices.getRoleByName("USER"));
-        }
-        if (rolesFromHtml.equals("admin")) {
-            userRoles.add(roleServices.getRoleByName("ADMIN"));
-        }
-        if (rolesFromHtml.equals("adminAndUser")) {
-            userRoles.add(roleServices.getRoleByName("ADMIN"));
-            userRoles.add(roleServices.getRoleByName("USER"));
-        }
-        user.setRoles(userRoles);
+        user.setRoles(getSetRoles(rolesFromHtml));
         userService.saveUser(user);
         mv.setViewName("redirect:/admin");
         return mv;
@@ -110,6 +71,21 @@ public class AdminController {
     public String deleteUser(@PathVariable("id") Long id){
         userService.deleteById(id);
         return "redirect:/admin";
+    }
+
+    public Set<Role> getSetRoles(String role){
+        Set<Role> userRoles = new HashSet<>();
+        if (role.equals("user")) {
+            userRoles.add(roleServices.getRoleByName("USER"));
+        }
+        if (role.equals("admin")) {
+            userRoles.add(roleServices.getRoleByName("ADMIN"));
+        }
+        if (role.equals("adminAndUser")) {
+            userRoles.add(roleServices.getRoleByName("ADMIN"));
+            userRoles.add(roleServices.getRoleByName("USER"));
+        }
+        return userRoles;
     }
 
 }
