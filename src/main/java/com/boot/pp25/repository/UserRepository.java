@@ -4,10 +4,21 @@ import com.boot.pp25.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends JpaRepository<User,Long> {
+import java.util.List;
 
-    User findUserByEmail(String userEmail);
 
-    User findUserByUserName(String userName);
+public interface UserRepository{
+    List<User> getAllUsers();
+
+    boolean addUser(User user);
+
+    void delete(Long id);
+
+    void editUser(User user);
+
+    User getUserById(Long id);
+
+    User getUserByName(String s);
+
+    User getUserByEmail(String email);
 }

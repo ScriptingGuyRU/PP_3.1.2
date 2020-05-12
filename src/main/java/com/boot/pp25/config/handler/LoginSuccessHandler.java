@@ -1,6 +1,6 @@
 package com.boot.pp25.config.handler;
 
-import com.boot.pp25.service.UserService;
+import com.boot.pp25.service.abstractServ.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,6 +1,10 @@
 package com.boot.pp25.controller;
 
-import com.boot.pp25.service.UserService;
+import com.boot.pp25.model.Role;
+import com.boot.pp25.model.User;
+import com.boot.pp25.service.abstractServ.RoleServices;
+import com.boot.pp25.service.abstractServ.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
@@ -20,25 +24,21 @@ public class UserController {
 
     private UserService userService;
 
-    public UserController(UserService userService) {
+    private RoleServices roleServices;
+
+    @Autowired
+    public UserController(UserService userService, RoleServices roleServices) {
         this.userService = userService;
+        this.roleServices = roleServices;
     }
 
     @GetMapping
     public ModelAndView userGet(Authentication auth) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("usersPage/users");
-
-        //TODO изменить
-        Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
-        List<String> roles = new ArrayList<String>();
-        for (GrantedAuthority a : authorities) {
-            roles.add(a.getAuthority());
-        }
-        modelAndView.addObject("userWithRoleUser",userService.findUserByUserName(auth.getName()));
-        modelAndView.addObject("rolesAuth",roles.stream().map(Objects::toString).collect(Collectors.joining(" ")));
-        //TODO До сюда
-
+        modelAndView.addObject("user",auth.getPrincipal());
+        modelAndView.addObject("rolesAuth",((User) auth.getPrincipal()).getRoles()
+                .stream().map(Objects::toString).collect(Collectors.joining(" ")));
         return modelAndView;
     }
 }

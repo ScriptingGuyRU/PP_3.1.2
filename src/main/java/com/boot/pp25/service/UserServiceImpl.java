@@ -2,6 +2,7 @@ package com.boot.pp25.service;
 
 import com.boot.pp25.model.User;
 import com.boot.pp25.repository.UserRepository;
+import com.boot.pp25.service.abstractServ.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -25,12 +26,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAll() {
-        return userRepository.findAll();
+        return userRepository.getAllUsers();
     }
 
     @Override
     public User getUserById(Long id) {
-        User user = userRepository.getOne(id);
+        User user = userRepository.getUserById(id);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return user;
     }
@@ -38,17 +39,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public void saveUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository.save(user);
+        userRepository.addUser(user);
     }
 
     @Override
     public void deleteById(Long id) {
-        userRepository.deleteById(id);
+        userRepository.delete(id);
     }
 
     @Override
     public User findUserByUserName(String s) {
-        return userRepository.findUserByUserName(s);
+        return userRepository.getUserByName(s);
     }
 
 }

@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-11">
-                <span th:text="${userNameAuth}" class="font-weight-bold"></span>
+                <span th:text="${user.email}" class="font-weight-bold"></span>
                 with roles:
                 <span th:text="${rolesAuth}" id="headerRoles" class="font-weight-bold"></span>
             </div>
@@ -63,13 +63,13 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <td th:text="${userWithRoleUser.id}"></td>
-                                <td th:text="${userWithRoleUser.userName}"></td>
-                                <td th:text="${userWithRoleUser.lastName}"></td>
-                                <td th:text="${userWithRoleUser.age}"></td>
-                                <td th:text="${userWithRoleUser.email}"></td>
+                                <td th:text="${user.id}"></td>
+                                <td th:text="${user.userName}"></td>
+                                <td th:text="${user.lastName}"></td>
+                                <td th:text="${user.age}"></td>
+                                <td th:text="${user.email}"></td>
                                 <td>
-                                    <div th:each="role : ${userWithRoleUser.roles}" th:text="${role}"></div>
+                                    <div th:each="role : ${user.roles}" th:text="${role}"></div>
                                 </td>
                                 </tr>
                                 </tbody>

@@ -1,4 +1,4 @@
-package com.boot.pp25.service;
+package com.boot.pp25.service.abstractServ;
 
 import com.boot.pp25.model.Role;
 
