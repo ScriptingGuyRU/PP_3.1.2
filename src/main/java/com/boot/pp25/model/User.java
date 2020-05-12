@@ -26,7 +26,6 @@ public class User implements UserDetails {
     @NotBlank(message = "Поле не должно быть пустым")
     private String userName;
 
-    @Size(min = 3, max = 10)
     @Column(name = "password")
     @NotBlank(message = "Поле не должно быть пустым")
     private String password;
