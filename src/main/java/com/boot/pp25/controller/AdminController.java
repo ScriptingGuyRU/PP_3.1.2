@@ -1,6 +1,5 @@
 package com.boot.pp25.controller;
 
-import antlr.StringUtils;
 import com.boot.pp25.model.Role;
 import com.boot.pp25.model.User;
 import com.boot.pp25.service.RoleServices;
@@ -11,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -22,16 +19,16 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/admin")
-public class adminController {
+public class AdminController {
 
-    UserService userService;
+    private UserService userService;
 
-    RoleServices roleServices;
+    private RoleServices roleServices;
 
-    Logger logger = LoggerFactory.getLogger(adminController.class);
+    private Logger logger = LoggerFactory.getLogger(AdminController.class);
 
     @Autowired
-    public adminController(UserService userService, RoleServices roleServices) {
+    public AdminController(UserService userService, RoleServices roleServices) {
         this.userService = userService;
         this.roleServices = roleServices;
     }
@@ -57,7 +54,7 @@ public class adminController {
         mv.addObject("userNameAuth",auth.getName());
         mv.addObject("rolesAuth",roles.stream().map(Objects::toString).collect(Collectors.joining(" ")));
         mv.addObject("user", new User()); //для Thymeleaf нужно передать объект
-        mv.setViewName("adminPages/adminMainPageBootStrap");
+        mv.setViewName("adminsPages/admin");
         return mv;
     }
 

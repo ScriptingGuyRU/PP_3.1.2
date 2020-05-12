@@ -39,11 +39,10 @@
             <!--Навигационное меню-->
             <div id="nav" class="col-3">
                 <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="nav2" data-toggle="pill" href="#UserMainPage" role="tab"
-                       aria-controls="UserMainPage" aria-selected="true">User</a>
-                    <a class="nav-link" data-toggle="pill" href="#AdminMainPage" id="leftNavAdmin" role="tab"
+                    <a class="nav-link active" data-toggle="pill" href="#AdminMainPage" id="leftNavAdmin" role="tab"
                        aria-controls="AdminMainPage" aria-selected="false">Admin</a>
-
+                    <a class="nav-link" id="nav2" data-toggle="pill" href="#UserMainPage" role="tab"
+                       aria-controls="UserMainPage" aria-selected="true">User</a>
                 </div>
             </div>
 
@@ -51,7 +50,7 @@
             <main id="panel" class="col-9">
 
                 <div class="tab-content">
-                    <div class="tab-pane fade" id="AdminMainPage" role="tabpanel" aria-labelledby="nav1">
+                    <div class="tab-pane fade show active" id="AdminMainPage" role="tabpanel" aria-labelledby="nav1">
                         <h1 class="text-left font-weight-bold">Admin panel</h1><br/>
                         <div>
                             <ul class="nav nav-tabs">
@@ -124,27 +123,27 @@
                                         <h5>First name</h5>
                                         <input class="form-control" type="text" th:field="*{userName}" id="userName"
                                                placeholder="First Name" min="3" max="12" required>
-                                        <br/><br/>
+                                        <br/>
                                         <h5>Last name</h5>
                                         <input class="form-control w-200%" type="text" name="lastName"
                                                th:field="*{lastName}"
-                                               id="lastName" placeholder="Last Name" min="3" max="12" required>
+                                               id="lastName" placeholder="Last Name" min="3" max="12" required><br/>
                                         <h5>Age</h5>
                                         <input class="form-control w-200%" type="number" name="age" th:field="*{age}"
                                                id="age"
                                                placeholder="age" min="0" max="100" required>
-                                        <br/><br/>
+                                        <br/>
                                         <h5>Email</h5>
                                         <input class="form-control w-200%" type="email" name="email" th:field="*{email}"
                                                id="email"
                                                placeholder="@yandex.ru" min="3" max="12" required>
-                                        <br/><br/>
+                                        <br/>
                                         <h5>Password</h5>
                                         <input class="form-control w-200%" type="password" name="password"
                                                th:field="*{password}"
                                                id="password" placeholder="Password" min="3" max="12" required>
-                                        <br/><br/>
-
+                                        <br/>
+                                        <h5>   Role</h5>
                                         <select class="custom-select" name="rolesFromHtml" size="2" multiple>
                                             <option value="user">USER</option>
                                             <option value="admin">admin</option>
@@ -157,7 +156,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade show active" id="UserMainPage" role="tabpanel" aria-labelledby="nav2">
+                    <div class="tab-pane fade" id="UserMainPage" role="tabpanel" aria-labelledby="nav2">
                         <h1 class="text-left font-weight-bold">User information-page</h1><br/>
                         <div class="border">
                             <h4 class="text-sm-left font-weight-bold pl-4 pt-2 pb-2 mb-0 ">About user</h4>
