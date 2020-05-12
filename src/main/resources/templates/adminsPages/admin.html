@@ -144,9 +144,10 @@
                                                id="password" placeholder="Password" min="3" max="12" required>
                                         <br/>
                                         <h5>   Role</h5>
-                                        <select class="custom-select" name="rolesFromHtml" size="2" multiple>
-                                            <option value="user">USER</option>
-                                            <option value="admin">admin</option>
+                                        <select class="custom-select" name="rolesFromHtml">
+                                            <option value="user">User</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="adminAndUser">Admin + User</option>
                                         </select>
                                         <button id="btnAddSubmit" type="submit" class="btn btn-success btn-lg">Add new
                                             user
@@ -231,9 +232,10 @@
                         <h5>Age:</h5>
                         <input class="form-control" type="number" th:value="${user.age}" name="age" id="ageEdit"
                                placeholder="age" min="0" max="100" required><br/>
-                        <select class="custom-select" name="rolesFromHtml" size="2" multiple>
-                            <option value="user">USER</option>
-                            <option value="admin">admin</option>
+                        <select class="custom-select" name="rolesFromHtml">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                            <option value="adminAndUser">Admin + User</option>
                         </select>
                     </div>
 
@@ -277,9 +279,10 @@
                                readonly><br/>
                         <h5>Age:</h5>
                         <input class="form-control" type="number" th:placeholder="${user.age}" readonly><br/>
-                        <select class="custom-select" name="rolesFromHtml" size="2" multiple>
-                            <option value="user">USER</option>
-                            <option value="admin">admin</option>
+                        <select class="custom-select" name="rolesFromHtml">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                            <option value="adminAndUser">Admin + User</option>
                         </select>
                     </div>
 

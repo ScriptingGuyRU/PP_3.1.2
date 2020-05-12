@@ -60,18 +60,21 @@ public class AdminController {
 
     @PostMapping("/add")
     public ModelAndView addUserControllerPost(@ModelAttribute("user") @Valid User user,
-                                              @RequestParam(value = "rolesFromHtml") String[] rolesFromHtml) {
+                                              @RequestParam(value = "rolesFromHtml") String rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
 
         Set<Role> userRoles = new HashSet<>();
-        for (String role: rolesFromHtml ) {
-            if (role.equals("user")) {
+            if (rolesFromHtml.equals("user")) {
                 userRoles.add(roleServices.getRoleByName("USER"));
             }
-            if (role.equals("admin")) {
+            if (rolesFromHtml.equals("admin")) {
                 userRoles.add(roleServices.getRoleByName("ADMIN"));
             }
+        if (rolesFromHtml.equals("adminAndUser")) {
+            userRoles.add(roleServices.getRoleByName("ADMIN"));
+            userRoles.add(roleServices.getRoleByName("USER"));
         }
+
 
         user.setRoles(userRoles);
         userService.saveUser(user);
@@ -82,18 +85,20 @@ public class AdminController {
 
     @PostMapping("/edit")
     public ModelAndView editUserControllerPost(@ModelAttribute @Valid User user,
-                                               @RequestParam(value = "rolesFromHtml") String[] rolesFromHtml) {
+                                               @RequestParam(value = "rolesFromHtml") String rolesFromHtml) {
         ModelAndView mv = new ModelAndView();
 
 
         Set<Role> userRoles = new HashSet<>();
-        for (String role: rolesFromHtml ) {
-            if (role.equals("user")) {
-                userRoles.add(roleServices.getRoleByName("USER"));
-            }
-            if (role.equals("admin")) {
-                userRoles.add(roleServices.getRoleByName("ADMIN"));
-            }
+        if (rolesFromHtml.equals("user")) {
+            userRoles.add(roleServices.getRoleByName("USER"));
+        }
+        if (rolesFromHtml.equals("admin")) {
+            userRoles.add(roleServices.getRoleByName("ADMIN"));
+        }
+        if (rolesFromHtml.equals("adminAndUser")) {
+            userRoles.add(roleServices.getRoleByName("ADMIN"));
+            userRoles.add(roleServices.getRoleByName("USER"));
         }
         user.setRoles(userRoles);
         userService.saveUser(user);

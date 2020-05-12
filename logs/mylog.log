@@ -1084,3 +1084,65 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2020-05-12 13:47:55.883  INFO 33944 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-12 13:47:55.883  INFO 33944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-05-12 13:47:55.889  INFO 33944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-05-12 13:53:26.332  INFO 39368 --- [main] com.boot.pp25.BootCrudApplication        : Starting BootCrudApplication on DESKTOP-8SGJBKD with PID 39368 (C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2\target\classes started by pc in C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2)
+2020-05-12 13:53:26.335  INFO 39368 --- [main] com.boot.pp25.BootCrudApplication        : No active profile set, falling back to default profiles: default
+2020-05-12 13:53:27.501  INFO 39368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-12 13:53:27.578  INFO 39368 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 2 JPA repository interfaces.
+2020-05-12 13:53:28.142  INFO 39368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-12 13:53:28.150  INFO 39368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-12 13:53:28.151  INFO 39368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 13:53:28.283  INFO 39368 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-12 13:53:28.284  INFO 39368 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1887 ms
+2020-05-12 13:53:28.429  INFO 39368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-12 13:53:28.481  INFO 39368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-12 13:53:28.571  INFO 39368 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-12 13:53:28.653  INFO 39368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-12 13:53:29.030  INFO 39368 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-12 13:53:29.041  INFO 39368 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-12 13:53:30.575  INFO 39368 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-12 13:53:30.582  INFO 39368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-12 13:53:30.947  WARN 39368 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-12 13:53:31.130  INFO 39368 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6493f780, org.springframework.security.web.context.SecurityContextPersistenceFilter@153409b8, org.springframework.security.web.header.HeaderWriterFilter@180d918a, org.springframework.security.web.authentication.logout.LogoutFilter@42805abe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e7517aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79ee779c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@391e5ffa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@782dc5, org.springframework.security.web.session.SessionManagementFilter@33837bd4, org.springframework.security.web.access.ExceptionTranslationFilter@1abf951a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9a07409]
+2020-05-12 13:53:31.278  INFO 39368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 13:53:31.499  INFO 39368 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-12 13:53:31.501  INFO 39368 --- [main] com.boot.pp25.BootCrudApplication        : Started BootCrudApplication in 5.597 seconds (JVM running for 6.573)
+2020-05-12 13:53:47.274  INFO 39368 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 13:53:47.275  INFO 39368 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-12 13:53:47.281  INFO 39368 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-05-12 13:54:14.726  INFO 39368 --- [http-nio-8080-exec-4] c.boot.pp25.controller.AdminController   : Add User: userName :delMe
+lastName delMe
+password delMe
+email delMe@ya.ru
+age 21
+roles 
+2020-05-12 13:56:02.428  INFO 43212 --- [main] com.boot.pp25.BootCrudApplication        : Starting BootCrudApplication on DESKTOP-8SGJBKD with PID 43212 (C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2\target\classes started by pc in C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2)
+2020-05-12 13:56:02.431  INFO 43212 --- [main] com.boot.pp25.BootCrudApplication        : No active profile set, falling back to default profiles: default
+2020-05-12 13:56:03.505  INFO 43212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-12 13:56:03.571  INFO 43212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60ms. Found 2 JPA repository interfaces.
+2020-05-12 13:56:04.104  INFO 43212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-12 13:56:04.112  INFO 43212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-12 13:56:04.112  INFO 43212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-12 13:56:04.246  INFO 43212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-12 13:56:04.247  INFO 43212 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1727 ms
+2020-05-12 13:56:04.407  INFO 43212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-12 13:56:04.458  INFO 43212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-12 13:56:04.549  INFO 43212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-12 13:56:04.624  INFO 43212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-12 13:56:04.994  INFO 43212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-12 13:56:05.005  INFO 43212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-12 13:56:06.559  INFO 43212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-12 13:56:06.566  INFO 43212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-12 13:56:06.904  WARN 43212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-12 13:56:07.091  INFO 43212 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@359fa722, org.springframework.security.web.context.SecurityContextPersistenceFilter@28269c65, org.springframework.security.web.header.HeaderWriterFilter@1f6d7e7c, org.springframework.security.web.authentication.logout.LogoutFilter@6d9ee75a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@9825465, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18b58c77, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24d0c6a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27b7204, org.springframework.security.web.session.SessionManagementFilter@7836c79, org.springframework.security.web.access.ExceptionTranslationFilter@64887fbc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36fe83d]
+2020-05-12 13:56:07.239  INFO 43212 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-12 13:56:07.456  INFO 43212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-12 13:56:07.458  INFO 43212 --- [main] com.boot.pp25.BootCrudApplication        : Started BootCrudApplication in 5.512 seconds (JVM running for 6.368)
+2020-05-12 13:56:25.258  INFO 43212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-12 13:56:25.259  INFO 43212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-12 13:56:25.264  INFO 43212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-05-12 13:56:46.704  INFO 43212 --- [http-nio-8080-exec-2] c.boot.pp25.controller.AdminController   : Add User: userName :delMe
+lastName delMe
+password delMe
+email delMe@ya.ru
+age 12
+roles USER  ADMIN 
