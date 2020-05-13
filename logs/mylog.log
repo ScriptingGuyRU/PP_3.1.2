@@ -81,3 +81,47 @@
 2020-05-13 10:57:15.287  INFO 37240 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-05-13 10:57:15.288  INFO 37240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-05-13 10:57:15.296  INFO 37240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-05-13 12:07:54.991  INFO 61484 --- [main] com.boot.pp25.BootCrudApplication        : Starting BootCrudApplication on DESKTOP-8SGJBKD with PID 61484 (C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2\target\classes started by pc in C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2)
+2020-05-13 12:07:55.005  INFO 61484 --- [main] com.boot.pp25.BootCrudApplication        : No active profile set, falling back to default profiles: default
+2020-05-13 12:07:57.543  INFO 61484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-13 12:07:57.595  INFO 61484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 JPA repository interfaces.
+2020-05-13 12:07:58.949  INFO 61484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 12:07:58.959  INFO 61484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 12:07:58.960  INFO 61484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-13 12:07:59.233  INFO 61484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 12:07:59.235  INFO 61484 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4143 ms
+2020-05-13 12:07:59.557  INFO 61484 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-13 12:07:59.667  INFO 61484 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-13 12:07:59.886  INFO 61484 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-13 12:08:00.008  INFO 61484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-13 12:08:01.049  INFO 61484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-13 12:08:01.090  INFO 61484 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-13 12:08:03.434  INFO 61484 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-13 12:08:03.473  INFO 61484 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-13 12:08:03.648  WARN 61484 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-13 12:08:03.898  INFO 61484 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b671dda, org.springframework.security.web.context.SecurityContextPersistenceFilter@36ecf9f6, org.springframework.security.web.header.HeaderWriterFilter@493968a9, org.springframework.security.web.authentication.logout.LogoutFilter@4b5aa48b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@51c008fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3bda1f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@625f5712, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25b20860, org.springframework.security.web.session.SessionManagementFilter@3c65f00e, org.springframework.security.web.access.ExceptionTranslationFilter@3dd66ff5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@608f310a]
+2020-05-13 12:08:04.111  INFO 61484 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 12:08:04.434  INFO 61484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 12:08:04.436  INFO 61484 --- [main] com.boot.pp25.BootCrudApplication        : Started BootCrudApplication in 11.14 seconds (JVM running for 14.151)
+2020-05-13 12:11:26.861  INFO 61516 --- [main] com.boot.pp25.BootCrudApplication        : Starting BootCrudApplication on DESKTOP-8SGJBKD with PID 61516 (C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2\target\classes started by pc in C:\Users\pc\Desktop\JM\PreProject_Spring\PPSpring_3.1.2)
+2020-05-13 12:11:26.864  INFO 61516 --- [main] com.boot.pp25.BootCrudApplication        : No active profile set, falling back to default profiles: default
+2020-05-13 12:11:27.887  INFO 61516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-13 12:11:27.918  INFO 61516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 JPA repository interfaces.
+2020-05-13 12:11:28.469  INFO 61516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-13 12:11:28.478  INFO 61516 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-13 12:11:28.479  INFO 61516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-13 12:11:28.612  INFO 61516 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-13 12:11:28.613  INFO 61516 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1681 ms
+2020-05-13 12:11:28.784  INFO 61516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-13 12:11:28.836  INFO 61516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-05-13 12:11:28.927  INFO 61516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-13 12:11:29.003  INFO 61516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-13 12:11:29.378  INFO 61516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-13 12:11:29.389  INFO 61516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-13 12:11:30.663  INFO 61516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-13 12:11:30.669  INFO 61516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-13 12:11:30.787  WARN 61516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-13 12:11:30.955  INFO 61516 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7337bd2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f17dd06, org.springframework.security.web.header.HeaderWriterFilter@415262a0, org.springframework.security.web.authentication.logout.LogoutFilter@538905d2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e8c58fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ec98ccc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a8b7e11, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4604e051, org.springframework.security.web.session.SessionManagementFilter@46fa2a7e, org.springframework.security.web.access.ExceptionTranslationFilter@1c787389, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fe4503a]
+2020-05-13 12:11:31.085  INFO 61516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-13 12:11:31.308  INFO 61516 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-13 12:11:31.311  INFO 61516 --- [main] com.boot.pp25.BootCrudApplication        : Started BootCrudApplication in 4.923 seconds (JVM running for 5.779)
